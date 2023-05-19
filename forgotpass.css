@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background: -webkit-linear-gradient(to right, #155799, #159957);
+  background: linear-gradient(to right, #155799, #159957);
+  color: whitesmoke;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" on;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+form {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  margin: auto;
+  color: whitesmoke;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(11, 15, 13, 0.582);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"], .form-group input[type="email"] {
+  align-items: center;
+  width: 75%;
+  padding: 5px;
+  justify-content: center;
+}
+
+.form-group .back-button {
+  text-align: center;
+}
+
+.form-group .back-button a {
+  text-decoration: none;
+  color: blue;
+}
+  /* Media queries for different screen sizes */
+
+    /* Small devices (mobile phones) */
+    @media (max-width: 767px) {
+      .container {
+        padding: 10px;
+      }
+    }
+
+    /* Medium devices (tablets) */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .container {
+        padding: 20px;
+      }
+    }
+
+    /* Large devices (laptops/desktops) */
+    @media (min-width: 992px) {
+      .container {
+        padding: 40px;
+      }
+    }
+  

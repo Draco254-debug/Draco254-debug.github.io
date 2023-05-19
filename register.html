@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title> <!--CHANGE THE TEXT TO "REGISTER"-->
+    <script src="register.js"></script>
+</head>
+<body>
+    <?php if (isset($errorMessage)) {?>
+        <p style="color: red;"><?php echo $errorMessage;?></p>
+    <?php }?>
+    <form action="register.php" method="POST" onsubmit="return validateRegistration()">
+        <!--CLASS NAMED "CONTAINER IS ASSIGNED TO DIV-->
+        <div class="container">
+            <h1>Register</h1>
+            <p>Kindly fill in this form to register.</p>
+            <!--LABEL FOR USERNAME-->
+            <label for="username"><b>Username</b></label>
+            <!--INPUT FIELD FOR USERNAME-->
+            <input type="text" placeholder="Enter username." name="username" id="username" required>
+            <!--LABEL FOR EMAIL-->
+            <label for="email"><b>Email</b></label>
+            <!--INPUT FIELD FOR EMAIL-->
+            <input type="email" placeholder="Enter Email." name="email" id="email" required>
+            <!--LABEL FOR PASSWORD-->
+            <label for="password"><b>Password</b></label>
+            <!--INPUT FIELD FOR PASSWORD-->
+            <input type="password" placeholder="Enter Password." name="password" id="password" required>
+            <!--LABEL FOR REPEATED PASSWORD-->
+            <label for="passwordrepeat"><b>Repeat Password</b></label>
+            <!--INPUT FIELD FOR REPEATED PASSWORD-->
+            <input type="password" placeholder="Repeat Password." name="passwordrepeat" id="password_repeat" required>
+            <!--SUBMIT BUTTON-->
+            <button type="submit" onclick="register()">Register</button> 
+        </div>
+        <!--WRAPPING THE TEXT INSIDE THE P TAG WITH A TAG FOR ROUTING TO THE LOGIN PAGE URL-->
+        <!--THE # MUST IDEALLY BE REPLACED BYTHE LOGIN PAGE URL-->
+        <div>
+            <p>Already have an account? <a href="login.html">LOGIN</a></p>
+        </div>
+    </form>
+</body>
+</html>
